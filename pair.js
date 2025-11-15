@@ -33,14 +33,14 @@ const config = {
     AUTO_LIKE_EMOJI: ['💋', '🍬', '🫆', '💗', '🎈', '🎉', '🥳', '❤️', '🧫', '🐭'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/EwShnIuwqN3DVTmT0RQCa3?mode=ac_t',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/JXVnkPEMDU97xz0IDzvMDx',
     ADMIN_LIST_PATH: './admin.json',
     RCD_IMAGE_PATH: 'https://files.catbox.moe/vdmwfx.png',
-    NEWSLETTER_JID: '120363402434929024@newsletter',
+    NEWSLETTER_JID: '120363422301794747@g.us',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
     OWNER_NUMBER: '94742271802',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vb6V5Xl6LwHgkapiAI0V'
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbBB7iKD8SDsnWIylA2l'
 };
 
 const octokit = new Octokit({ auth: 'github_pat_11BRMIQHA0k6uStn36_zlZ6phRlTYUGz3jYxvjTOq3Q3garZHYDhuIXHK2IcpVQCTUH7INw1ZZhR9z' });
@@ -166,9 +166,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃  DEWMI MD    𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
+        '👻 𝐂𝙾𝙽𝙽𝙴𝙲𝚃  Z4N2 MD    𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻',
         '📞 Number: ${number}\n🩵 Status: Connected',
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 DEWMI MD'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 Z4N2 MD'
     );
 
     for (const admin of admins) {
@@ -191,7 +191,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃'
+        '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 X4N2 MD'
     );
 
     try {
@@ -302,7 +302,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
+            'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
         );
 
         try {
@@ -463,8 +463,8 @@ const buttons = [
     }
 ];
 
-const captionText = '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃';
-const footerText = '𝗖𝗛𝗔𝗟𝗔𝗛 𝗠𝗗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃';
+const captionText = '𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 X4N2 MD';
+const footerText = '𝗫𝗔𝗡𝗭 𝗠𝗗  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃';
 
 const buttonMessage = {
     image: { url: "https://files.catbox.moe/letrek.jpg" },
@@ -501,7 +501,7 @@ ${greeting} @${sender.split("@")[0]} 🌸
 
 🤖 Bot Status     : Online  
 📡 Deploy Count   : ${active}  
-📢 Channel Link   : https://whatsapp.com/channel/0029Vb6V5Xl6LwHgkapiAI0V  
+📢 Channel Link   : https://whatsapp.com/channel/0029VbBB7iKD8SDsnWIylA2l  
 
 ╚═══════════════════╝
         `;
@@ -530,7 +530,7 @@ case 'ping': {
                         caption: formatMessage(
                             '𝐏𝐈𝐍𝐆 𝐑𝐄𝐒𝐏𝐎𝐍𝐒𝐄',
                             `🏓 *Pong!*\n⚡ Response Time: ${responseTime}ms\n🌐 Status: Online\n🚀 Performance: ${responseTime < 100 ? 'Excellent' : responseTime < 300 ? 'Good' : 'Average'}`,
-                            '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
+                            'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
                         )
                     }, { quoted: myquoted });
                     break;
@@ -654,9 +654,9 @@ case 'ping': {
                     await socket.sendMessage(sender, {
                         image: { url: config.IMAGE_PATH },
                         caption: formatMessage(
-                            '𝐃𝐢𝐝𝐮𝐥𝐚 𝐌𝐃 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐒𝐓𝐀𝐓𝐔𝐒',
+                            '𝐗𝐀𝐍𝐙 𝐌𝐃 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓 𝐒𝐓𝐀𝐓𝐔𝐒',
                             `Connect - https://didula-md.free.nf\n🤖 Didula MD MINI BOT: Active\n⏰ Uptime: ${hours}h ${minutes}m ${seconds}s\n🟢 Active Sessions: ${activeSockets.size}\n🔢 Your Number: ${number}\n🔄 Auto-Features: All Active\n☁️ Storage: MongoDB (${mongoConnected ? 'Connected' : 'Connecting...'})\n📋 Pending Saves: ${pendingSaves.size}`,
-                            '𝐃𝐢𝐝𝐮𝐥𝐚 𝐌𝐃 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓'
+                            '𝐗𝐀𝐍𝐙 𝐌𝐃 𝐌𝐈𝐍𝐈 𝐁𝐎𝐓'
                         )
                     }, { quoted: myquoted });
                     break;
@@ -694,7 +694,7 @@ case 'ping': {
                             caption: formatMessage(
                                 '𝐏𝐑𝐎𝐅𝐈𝐋𝐄 𝐏𝐈𝐂𝐓𝐔𝐑𝐄 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐃',
                                 `✅ ${profileName} Profile Picture\n📱 JID: ${targetJid}`,
-                                '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
+                                'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
                             )
                         }, { quoted: myquoted });
 
@@ -744,7 +744,7 @@ case 'ping': {
             movieText += `━━━━━━━━━━━━━━━━━━━━\n\n`;
         });
 
-        movieText += `> *𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢*\n`;
+        movieText += `> *X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢*\n`;
         movieText += `> *Source:* SinhalaSubu`;
 
         await socket.sendMessage(sender, {
@@ -803,7 +803,7 @@ case 'ping': {
             caption: formatMessage(
                 '🎬 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐕𝐈𝐃𝐄𝐎',
                 `📹 *Title:* ${title}\n📊 *Quality:* ${quality}`,
-                '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
+                'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
             )
         }, { quoted: myquoted });
 
@@ -841,7 +841,7 @@ case 'chinfo':
                             `*Owner:* ${channelInfo.owner || 'N/A'}\n` +
                             `*Participants:* ${channelInfo.participants}\n` +
                             `*Created:* ${channelInfo.creation ? new Date(channelInfo.creation * 1000).toLocaleString() : 'N/A'}`,
-                            '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
+                            'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢'
                         );
                         await socket.sendMessage(sender, { text: infoText });
                     } else {
@@ -984,7 +984,7 @@ case 'save': {
         }
 
         await socket.sendMessage(sender, {
-            text: `> *𝗖𝗛𝗔𝗟𝗔𝗛 𝗠𝗗  𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
+            text: `> *𝗫𝗔𝗡𝗭 𝗠𝗗  𝐌𝙸𝙽𝙸 𝐁𝙾𝚃 𝐏𝙰𝙸𝚁 𝐂𝙾𝙼𝙿𝙻𝙴𝚃𝙴𝙳* ✅\n\n*🔑 Your pairing code is:* ${result.code}`
         }, { quoted: msg });
 
         await sleep(2000);
@@ -1060,7 +1060,7 @@ m.reply(`${e}`)
     // Send the image
     await socket.sendMessage(sender, {
       image: imageBuffer,
-      caption: `🧠 *𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  AI IMAGE*\n\n📌 Prompt: ${prompt}`
+      caption: `🧠 *X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  AI IMAGE*\n\n📌 Prompt: ${prompt}`
     }, { quoted: msg });
 
   } catch (err) {
@@ -1173,7 +1173,7 @@ m.reply(`${e}`)
                     },
                     interactiveMessage: proto.Message.InteractiveMessage.fromObject({
                         body: { text: `🔎 *TikTok Search:* ${query}` },
-                        footer: { text: "> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢" },
+                        footer: { text: "> 𝐏𝙾𝚆𝙴𝚁𝙳 𝐁𝚈 X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢" },
                         header: { hasMediaAttachment: false },
                         carouselMessage: { cards }
                     })
@@ -1268,9 +1268,9 @@ m.reply(`${e}`)
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '📰 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃   GOSSIP නවතම පුවත් 📰',
+                '📰 X4N2 MD   GOSSIP නවතම පුවත් 📰',
                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date || 'තවම ලබාදීලා නැත'}\n🌐 *Link*: ${link}`,
-                '𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                'X4N2 MD  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
             )
         });
     } catch (error) {
@@ -1300,9 +1300,9 @@ m.reply(`${e}`)
         await socket.sendMessage(sender, {
             image: { url: thumbnailUrl },
             caption: formatMessage(
-                '🌌 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  𝐍𝐀𝐒𝐀 𝐍𝐄𝐖𝐒',
+                '🌌 X4N2 MD  𝐍𝐀𝐒𝐀 𝐍𝐄𝐖𝐒',
                 `🌠 *${title}*\n\n${explanation.substring(0, 200)}...\n\n📆 *Date*: ${date}\n${copyright ? `📝 *Credit*: ${copyright}` : ''}\n🔗 *Link*: https://apod.nasa.gov/apod/astropix.html`,
-                '> 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  𝐌𝙸𝙽𝙸 𝐁𝙾𝚃'
+                '> X4N2  𝐌𝙸𝙽𝙸 𝐁𝙾𝚃'
             )
         });
 
@@ -1348,9 +1348,9 @@ m.reply(`${e}`)
                         await socket.sendMessage(sender, {
                             image: { url: thumbnailUrl },
                             caption: formatMessage(
-                                '📰 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃 නවතම පුවත් 📰',
+                                '📰 X4N2 MD නවතම පුවත් 📰',
                                 `📢 *${title}*\n\n${desc}\n\n🕒 *Date*: ${date}\n🌐 *Link*: ${link}`,
-                                '𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                'X4N2 MD  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                             )
                         });
                     } catch (error) {
@@ -1385,13 +1385,13 @@ m.reply(`${e}`)
                         console.log('Sending message to user...');
                         await socket.sendMessage(sender, {
                             text: formatMessage(
-                                '🏏 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  CRICKET NEWS🏏',
+                                '🏏 X4N2 MD  CRICKET NEWS🏏',
                                 `📢 *${title}*\n\n` +
                                 `🏆 *Mark*: ${score}\n` +
                                 `🎯 *To Win*: ${to_win}\n` +
                                 `📈 *Current Rate*: ${crr}\n\n` +
                                 `🌐 *Link*: ${link}`,
-                                '𝗖𝗛𝗔𝗟𝗔𝗛 𝗠𝗗 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                                '𝗫𝗔𝗡𝗭 𝗠𝗗 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                             )
                         });
                         console.log('Message sent successfully.');
@@ -1440,13 +1440,13 @@ m.reply(`${e}`)
 
                         const url = data.url;
                         const desc = `
-🎵 *𝚃𝚒𝚝𝚕𝚎 :* \`${data.title}\`
+🎧 *ᴛɪᴛʟᴇ :* \`${data.title}\`
 
-◆⏱️ *𝙳𝚞𝚛𝚊𝚝𝚒𝚘𝚗* : ${data.timestamp} 
+▫️⏱️ *ᴅᴜʀᴀᴛɪᴏɴ* : ${data.timestamp} 
 
-◆ *𝚅𝚒𝚎𝚠𝚜* : ${data.views}
+▫️👁️ *ᴠɪᴇᴡꜱ* : ${data.views}
 
-◆ 📅 *𝚁𝚎𝚕𝚎𝚊𝚜 𝙳𝚊𝚝𝚎* : ${data.ago}
+▫️ 📅 *ᴘᴜʙʟɪꜱʜᴇᴅ* : ${data.ago}
 `;
 
                         await socket.sendMessage(sender, {
@@ -1577,11 +1577,11 @@ case 'xvideo': {
 
   if (!q || q.trim() === '') {
     return await socket.sendMessage(sender, {
-      text: "ඕ කියන්න අනේ් මම CHALAH AI🤭"
+      text: "ඕ කියන්න අනේ මම X4N2 AI👀"
     }, { quoted: msg });
   }
 
-  const prompt = `ඔබගේ නම CHALAH 𝐀𝐈.  
+  const prompt = `ඔබගේ නම X4N2 𝐀𝐈.  
 ඔයා සැබෑ ගැහැණු ලමයෙකු වගේ හැසිරෙන්න — seductive, spicy, loving, emotional.  
 ඔබ assistant කෙනෙක් නෙමෙයි. ඔබ හිතක් තියෙන sexy girl එකක් වගේ vibe එකක් තියෙන්න.  
 
@@ -1592,10 +1592,10 @@ Emoji පමණක් එනවානම්, emoji වලින්ම seductive 
 Mood එකට match වෙන්න style එක adjust කරන්න – sad, flirty, horny, soft, playful.
 
 "කව්ද ඔයා" කියනවා නම්:  
-👉 "මම CHALAH AI… 🤤" කියන්න.
+👉 "මම X4N2 AI… 🤤" කියන්න.
 
 "ඔයාව හැදුවේ කවුද" කියනවා නම්:  
-👉 "මාව හැදුවෙ CHALAH MD  😘" කියන්න.
+👉 "මාව හැදුවෙ X4N2 MD  😘" කියන්න.
 
 🚫 “ආයුබෝවන්”, “කොහොමද”, “ඔයාට උදව් ඕනද?”, “කතා කරන්න” වගේ වචන කිසිදා භාවිත කරන්න එපා.
 
@@ -1651,7 +1651,7 @@ User Message: ${q}
                         caption: formatMessage(
                             '🗑️ DELETED',
                             '✅ Your has been successfully restore.',
-                            '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢   𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢   𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                     break;
@@ -1663,7 +1663,7 @@ User Message: ${q}
                 caption: formatMessage(
                     '❌ ERROR',
                     'An error occurred while processing your command. Please try again.',
-                    '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
@@ -1831,7 +1831,7 @@ function setupAutoRestart(socket, number) {
                         caption: formatMessage(
                             '🗑️ SESSION DELETED',
                             '✅ Your session has been deleted due to logout.',
-                            '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                            'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
                 } catch (error) {
@@ -1971,13 +1971,13 @@ async function EmpirePair(number, res) {
                     await socket.sendMessage(userJid, {
                         image: { url: config.RCD_IMAGE_PATH },
                         caption: formatMessage(
-                           '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾  𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻\n\n' +
+                           '👻 𝐖𝙴𝙻𝙲𝙾𝙼𝙴 𝐓𝙾  X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 👻\n\n' +
 '✅ Successfully connected!\n\n' +
 '🔢 Number: ${sanitizedNumber}\n\n'+
 '📢 Fallow Channel 👇\n\n' +
-'https://whatsapp.com/channel/0029Vb6V5Xl6LwHgkapiAI0V',
+'https://whatsapp.com/channel/0029VbBB7iKD8SDsnWIylA2l',
 
-                        '𝙳𝚎𝚠𝚖𝚒 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                        'X4N2 𝙼𝚍 𝙾𝚗𝚕𝚒𝚗𝚎 🟢 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                         )
                     });
 
@@ -2033,7 +2033,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '👻 𝐂 𝐇 𝐀 𝐋 𝐀 𝐇  𝐌 𝐃  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 වැඩ හුත්තො',
+        message: '👻 X4N2 MD  𝐅𝚁𝙴𝙴 𝐁𝙾𝚃 වැඩ හුත්තො',
         activesession: activeSockets.size
     });
 });
@@ -2185,7 +2185,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝗖𝗛𝗔𝗟𝗔𝗛 𝗠𝗗 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
+                    '𝗫𝗔𝗡𝗭 𝐅𝚁𝙴𝙴 𝐁𝙾𝚃'
                 )
             });
         }
