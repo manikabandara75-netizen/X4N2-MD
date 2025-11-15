@@ -1,2 +1,1 @@
-# CHALAH-MD-MINI-BOT
-කෝඩ් ගන්න එපා බම් මහන්සියෙන් හදපුවනෙ
+# X4N2-MD-MINI-BOT
