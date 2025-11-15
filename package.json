@@ -1,7 +1,7 @@
 {
-  "name": "HASHAN-md",
+  "name": "X4N2-MD",
   "version": "1.0.0",
-  "description": "HASHAN-MD WhatsApp Bot with Multi-Number Support",
+  "description": "X4N2-MD WhatsApp Bot with Multi-Number Support",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -35,8 +35,8 @@
     "bot",
     "multi-device",
     "baileys",
-    "chalah-md"
+    "X4N2-MD"
   ],
-  "author": "Your Name",
+  "author": "X4N2",
   "license": "MIT"
 }
